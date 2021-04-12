@@ -91,6 +91,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
                 itemBuilder: (context, index) => GestureDetector(
                     onTap: () async {
+                      ///
+                      /// Change to false when you want to use the camera
+                      ///
+
                       bool isGallery = true;
                       final image = await pickImage(!isGallery ? ImageSource.camera : ImageSource.gallery);
                       setState(() {
